@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Awesome Friends</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Page Loader -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <p class="loader-text">Loading...</p>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-crown"></i> NAWABS
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#friends" class="nav-link">Friends</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-badge">Welcome to</div>
+            <h1 class="hero-title">
+                <span class="title-line">My Awesome</span>
+                <span class="title-line title-highlight">Friends</span>
+            </h1>
+            <p class="hero-description">
+                Welcome to my circle of amazing people! These are the friends who make life extraordinary. 
+                Each one brings something unique to the table. Click on any card to learn more about them!
+            </p>
+            <a href="#friends" class="hero-btn">
+                Explore Now <i class="fas fa-arrow-down"></i>
+            </a>
+        </div>
+        <div class="hero-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+    </section>
+
+    <!-- Friends Section -->
+    <section id="friends" class="friends-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-decoration">Meet The Squad</span>
+            </h2>
+            
+            <div class="friend-navigation">
+                <div class="friend-counter" id="friendCounter">1 / 4</div>
+                
+                <div class="dropdown-container">
+                    <button class="dropdown-btn" id="dropdownBtn">
+                        <i class="fas fa-users"></i> Select Friend <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="dropdown-menu" id="dropdownMenu">
+                        <!-- Dropdown items will be generated here -->
+                    </div>
+                </div>
+            </div>
+            
+            <div class="friend-display">
+                <div class="single-friend-card" id="friendCard">
+                    <!-- Friend card will be dynamically generated here -->
+                </div>
+            </div>
+            
+            <button class="view-details-btn" id="viewDetailsBtn">
+                View Full Profile <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-decoration">About This Page</span>
+            </h2>
+            <p class="about-text">
+                This website is a tribute to the incredible people in my life. Each friend here has made 
+                a lasting impact, and I wanted to create a special place to celebrate our friendships. 
+                Feel free to explore and get to know them better!
+            </p>
+        </div>
+    </section>
+
+    <!-- Modal for Detailed Profile -->
+    <div id="profileModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modalImage" src="" alt="Profile">
+                </div>
+                <div class="modal-info">
+                    <h2 id="modalName"></h2>
+                    <p id="modalBio" class="modal-bio"></p>
+                    
+                    <div class="modal-section">
+                        <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+                        <p id="modalEducation"></p>
+                    </div>
+                    
+                    <div class="modal-section">
+                        <h3><i class="fas fa-trophy"></i> Achievements</h3>
+                        <p id="modalAchievements"></p>
+                    </div>
+                    
+                    <div class="modal-section">
+                        <h3><i class="fas fa-heart"></i> Hobbies</h3>
+                        <p id="modalHobbies"></p>
+                    </div>
+                    
+                    <div class="modal-section">
+                        <h3><i class="fas fa-star"></i> Skills</h3>
+                        <p id="modalSkills"></p>
+                    </div>
+                    
+                    <div class="modal-section">
+                        <h3><i class="fas fa-lightbulb"></i> Fun Fact</h3>
+                        <p id="modalFunFact"></p>
+                    </div>
+                    
+                    <div class="modal-social" id="modalSocial">
+                        <!-- Social icons will be added here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
